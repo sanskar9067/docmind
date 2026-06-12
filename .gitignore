@@ -1,0 +1,14 @@
+/venv/
+/node_modules/
+/dist/
+/build/
+/docs/
+/logs/
+/tmp/
+/uploads/
+/static/
+/media/
+/staticfiles/
+/templates/
+/frontend/
+.env
