@@ -10,5 +10,15 @@
 /media/
 /staticfiles/
 /templates/
-/frontend/
+/frontend/node_modules/
+/frontend/dist/
+/frontend/build/
+/frontend/docs/
+/frontend/logs/
+/frontend/tmp/
+/frontend/uploads/
+/frontend/static/
+/frontend/media/
+/frontend/staticfiles/
+/frontend/templates/
 .env

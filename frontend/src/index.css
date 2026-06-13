@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg-deep: #0c0f14;
+  --bg-panel: #121820;
+  --bg-elevated: #1a2230;
+  --bg-hover: #222c3d;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text: #eef2f7;
+  --text-muted: #8b97a8;
+  --accent: #e8a849;
+  --accent-hover: #f0bc6a;
+  --accent-soft: rgba(232, 168, 73, 0.12);
+  --user-bubble: #2a3548;
+  --assistant-bubble: #161e2a;
+  --error: #ff6b6b;
+  --error-bg: rgba(255, 107, 107, 0.1);
+  --success: #5dd39e;
+  --success-bg: rgba(93, 211, 158, 0.12);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  --font-ui: 'Nunito', -apple-system, BlinkMacSystemFont, 'SF Pro Rounded', 'SF Pro Display', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  background: var(--bg-deep);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}

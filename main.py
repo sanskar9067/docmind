@@ -123,6 +123,19 @@ async def chat(message: str = Form(...),
     except jwt.InvalidTokenError:
         return {"success": "False", "message": "Invalid token!"}
 
+@app.get("/chat_history")
+def chat_history(authorization: str = Header(...), db: Session = Depends(get_db)):
+    token = authorization.split(" ")[1]
+    try:
+        payload = jwt.decode(token, "secret", algorithms=["HS256"])
+        user_id = payload.get("user_id")
+        chats = db.query(Chat).filter(Chat.user_id == user_id).all()
+        return {"success": "True", "message": "Chat history retrieved successfully!", "chats": chats}
+    except jwt.ExpiredSignatureError:
+        return {"success": "False", "message": "Token has expired!"}
+    except jwt.InvalidTokenError:
+        return {"success": "False", "message": "Invalid token!"}
+
     
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
